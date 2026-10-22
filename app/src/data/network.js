@@ -1,9 +1,9 @@
 // AS218883 — static operator inventory, not live routing telemetry.
 //
-// Sources checked read-only on 2026-10-02 UTC:
-// - melspectrum-noc @ 4379d48c78b6ebb1a9fe8cfee10bff2b340e2f3a:
+// Sources checked read-only on 2026-10-22 UTC:
+// - melspectrum-noc @ ce44791c7b908eaf0c4009fa964da043df3c66c5:
 //   config/network.yaml, config/visibility.yaml and config/incidents/.
-// - wg-enroll @ ac29e6c5ebf685b7a7df75a75ef57de684b5542d:
+// - wg-enroll @ 25d7c6b1ebc2a4da781483c6161715ce6c3d3537:
 //   addressing.yaml and pops.yaml.
 //
 // GOVERNANCE (do not relax these when editing):
@@ -32,7 +32,7 @@ export const networkSnapshot = {
   asn: 218883,
   legalName: 'Melspectrum Technology Co., Ltd.',
   rir: 'RIPE',
-  inventoryAsOf: '2026-10-01',
+  inventoryAsOf: '2026-10-22',
   primaryPrefix: '2a0e:4001:3000::/40',
 
   // Configured primary-space announcements; not a live RIS/RIB observation.
@@ -42,23 +42,27 @@ export const networkSnapshot = {
     { prefix: '2a0e:4001:3010::/48', rir: 'RIPE', role: '美国生产服务', roleEn: 'US production' },
     { prefix: '2a0e:4001:3011::/48', rir: 'RIPE', role: '美国网络设施', roleEn: 'US infrastructure' },
     { prefix: '2a0e:4001:3018::/48', rir: 'RIPE', role: '美国终端接入', roleEn: 'US access' },
+    { prefix: '2a0e:4001:3020::/44', rir: 'RIPE', role: '香港区域', roleEn: 'HK region' },
     { prefix: '2a0e:4001:3030::/44', rir: 'RIPE', role: '欧洲区域', roleEn: 'EU region' },
     { prefix: '2a0e:4001:3031::/48', rir: 'RIPE', role: '欧洲网络设施', roleEn: 'EU infrastructure' },
     { prefix: '2a0e:4001:3042::/48', rir: 'RIPE', role: '中国计算网络', roleEn: 'CN compute' },
     { prefix: '2a0e:4001:3048::/48', rir: 'RIPE', role: '中国终端接入', roleEn: 'CN access' },
+    { prefix: '2a0e:4001:3060::/44', rir: 'RIPE', role: '台湾区域', roleEn: 'TW region' },
+    { prefix: '2a0e:4001:30a0::/44', rir: 'RIPE', role: '日本区域', roleEn: 'JP region' },
+    { prefix: '2a0e:4001:30a1::/48', rir: 'RIPE', role: '日本网络设施', roleEn: 'JP infrastructure' },
   ],
   legacyPrefixes: [
     { prefix: '2a13:c8c3:e803::/48', rir: 'RIPE', status: '已撤回（2026-09-28）；AMS 已退役', statusEn: 'Withdrawn (2026-09-28); AMS retired' },
     { prefix: '2602:f92a:a463::/48', rir: 'ARIN', status: '退役中', statusEn: 'Retiring' },
   ],
 
-  // RIPEstat routing-status, query_time 2026-10-02T00:00Z. Scoped to the /40 only.
+  // RIPEstat routing-status, query_time 2026-10-22T00:00Z. Scoped to the /40 only.
   ris: {
     prefix: '2a0e:4001:3000::/40',
     source: 'RIPE RIS',
-    observedAt: '2026-10-02',
-    visible: 316,
-    total: 316,
+    observedAt: '2026-10-22',
+    visible: 153,
+    total: 153,
     firstSeen: '2026-09-28',
   },
 
@@ -78,6 +82,9 @@ export const networkSnapshot = {
     { code: 'HKG', region: '香港', regionEn: 'Hong Kong', coords: [22.32, 114.17], backboneTo: 'LAX' },
     { code: 'LON', region: '伦敦', regionEn: 'London', coords: [51.51, -0.13], backboneTo: 'LAX' },
     { code: 'STL', region: '圣路易斯', regionEn: 'St. Louis', coords: [38.63, -90.20], backboneTo: 'LAX' },
+    { code: 'TYO', region: '东京', regionEn: 'Tokyo', coords: [35.68, 139.69], backboneTo: 'LAX' },
+    { code: 'TPE', region: '台北', regionEn: 'Taipei', coords: [25.03, 121.57], backboneTo: 'LAX' },
+    { code: 'FRA', region: '法兰克福', regionEn: 'Frankfurt', coords: [50.11, 8.68], backboneTo: 'LAX' },
   ],
 };
 

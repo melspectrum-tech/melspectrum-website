@@ -35,8 +35,8 @@ export default function Network() {
             'The path our products travel is one we run ourselves.',
           )}
           sub={t(
-            `我们运营自治域 AS${N.asn}，主地址块为 ${N.primaryPrefix}，路由节点覆盖洛杉矶、盐湖城、香港、伦敦和圣路易斯。以下是截至 ${N.inventoryAsOf} 的运维清单快照；实时状态请查看 Status 和 Looking Glass，公共路由记录可在第三方数据库核对。`,
-            `We operate AS${N.asn}, with primary address block ${N.primaryPrefix} and routing locations in Los Angeles, Salt Lake City, Hong Kong, London and St. Louis. This is an operator inventory snapshot as of ${N.inventoryAsOf}. See Status and Looking Glass for live status, and third-party databases for public routing records.`,
+            `我们运营自治域 AS${N.asn}，主地址块为 ${N.primaryPrefix}，路由节点覆盖洛杉矶、盐湖城、圣路易斯、香港、东京、台北、伦敦和法兰克福。以下是截至 ${N.inventoryAsOf} 的运维清单快照；实时状态请查看 Status 和 Looking Glass，公共路由记录可在第三方数据库核对。`,
+            `We operate AS${N.asn}, with primary address block ${N.primaryPrefix} and routing locations in Los Angeles, Salt Lake City, St. Louis, Hong Kong, Tokyo, Taipei, London and Frankfurt. This is an operator inventory snapshot as of ${N.inventoryAsOf}. See Status and Looking Glass for live status, and third-party databases for public routing records.`,
           )}
         />
 
