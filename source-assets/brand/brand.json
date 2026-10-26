@@ -11,7 +11,7 @@
     "somnil": {"oklch": "oklch(0.68 0.12 290)", "srgb": "#988BDD"}
   },
   "marks": {
-    "company": "dome (sound) with an inner negative-space M, dissolving into five staff stripes (spectrum / 五线谱 / 融)",
+    "company": "2026-10: MEL geometric wordmark (official SVGs in mel/, rasters by generate_mel.py; white #f8f7f4 on dark, black #111111 on light). The 2026-09 teal dome below in generate.py is retired for the company.",
     "pianotuner": "seven curved arms (seven white keys of an octave) radiating from a struck centre — a pinwheel of sound",
     "somnil": "crescent"
   },
