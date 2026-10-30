@@ -26,6 +26,9 @@
 //    v6.pianotuner.top AAAA 2a0e:4001:3010:400::80 (= productionHost) and
 //    A 192.255.139.83; HTTPS over IPv6 returned 200 from 14/14 Globalping probes.
 //    It is dual-stack: only IPv6 visitors reach it through AS218883.
+//    2026-10-30 UTC: v6.pianotuner.top was deleted (DNS + vhost) when PianoTuner
+//    production moved to web2, which is reached only via Cloudflare Tunnel.
+//    directService is therefore null until a checked direct service exists again.
 // 6. Presence and backbone links follow the NOC inventory, not transit coverage.
 
 export const networkSnapshot = {
@@ -71,10 +74,7 @@ export const networkSnapshot = {
     host: 'web1.lax.us.net.melspectrum.com',
     address: '2a0e:4001:3010:400::80',
   },
-  directService: {
-    host: 'v6.pianotuner.top',
-    address: '2a0e:4001:3010:400::80',
-  },
+  directService: null,
 
   routingPresence: [
     { code: 'LAX', region: '洛杉矶', regionEn: 'Los Angeles', coords: [34.05, -118.24] },
