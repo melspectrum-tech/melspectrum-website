@@ -1,10 +1,10 @@
 // AS218883 — static operator inventory, not live routing telemetry.
 //
-// Sources checked read-only on 2026-10-22 UTC:
-// - melspectrum-noc @ ce44791c7b908eaf0c4009fa964da043df3c66c5:
-//   config/network.yaml, config/visibility.yaml and config/incidents/.
-// - wg-enroll @ 25d7c6b1ebc2a4da781483c6161715ce6c3d3537:
-//   addressing.yaml and pops.yaml.
+// Sources checked read-only on 2026-10-31 UTC:
+// - melspectrum-noc @ d5a9659: config/network.yaml (prefixes, nodes).
+// - wg-enroll @ 3de7432: addressing.yaml and pops.yaml.
+// 2026-10-31: SLC (BGP2, retired 2026-10-30) and STL (BGP5, retired 2026-10-31)
+// removed; 2a0e:4001:3011::/48 is no longer announced (covered by the /44).
 //
 // GOVERNANCE (do not relax these when editing):
 // 1. Registry, configured announcements, and measured reachability are separate
@@ -35,7 +35,7 @@ export const networkSnapshot = {
   asn: 218883,
   legalName: 'Melspectrum Technology Co., Ltd.',
   rir: 'RIPE',
-  inventoryAsOf: '2026-10-22',
+  inventoryAsOf: '2026-10-31',
   primaryPrefix: '2a0e:4001:3000::/40',
 
   // Configured primary-space announcements; not a live RIS/RIB observation.
@@ -43,7 +43,6 @@ export const networkSnapshot = {
     { prefix: '2a0e:4001:3000::/40', rir: 'RIPE', role: '聚合宣告', roleEn: 'Aggregate' },
     { prefix: '2a0e:4001:3010::/44', rir: 'RIPE', role: '美国区域', roleEn: 'US region' },
     { prefix: '2a0e:4001:3010::/48', rir: 'RIPE', role: '美国生产服务', roleEn: 'US production' },
-    { prefix: '2a0e:4001:3011::/48', rir: 'RIPE', role: '美国网络设施', roleEn: 'US infrastructure' },
     { prefix: '2a0e:4001:3018::/48', rir: 'RIPE', role: '美国终端接入', roleEn: 'US access' },
     { prefix: '2a0e:4001:3020::/44', rir: 'RIPE', role: '香港区域', roleEn: 'HK region' },
     { prefix: '2a0e:4001:3030::/44', rir: 'RIPE', role: '欧洲区域', roleEn: 'EU region' },
@@ -78,10 +77,8 @@ export const networkSnapshot = {
 
   routingPresence: [
     { code: 'LAX', region: '洛杉矶', regionEn: 'Los Angeles', coords: [34.05, -118.24] },
-    { code: 'SLC', region: '盐湖城', regionEn: 'Salt Lake City', coords: [40.76, -111.89], backboneTo: 'LAX' },
     { code: 'HKG', region: '香港', regionEn: 'Hong Kong', coords: [22.32, 114.17], backboneTo: 'LAX' },
     { code: 'LON', region: '伦敦', regionEn: 'London', coords: [51.51, -0.13], backboneTo: 'LAX' },
-    { code: 'STL', region: '圣路易斯', regionEn: 'St. Louis', coords: [38.63, -90.20], backboneTo: 'LAX' },
     { code: 'TYO', region: '东京', regionEn: 'Tokyo', coords: [35.68, 139.69], backboneTo: 'LAX' },
     { code: 'TPE', region: '台北', regionEn: 'Taipei', coords: [25.03, 121.57], backboneTo: 'LAX' },
     { code: 'FRA', region: '法兰克福', regionEn: 'Frankfurt', coords: [50.11, 8.68], backboneTo: 'LAX' },
